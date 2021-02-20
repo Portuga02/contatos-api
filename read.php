@@ -2,7 +2,7 @@
 
 include_once "conexao.php";
 
-$sql_read = "SELECT *FROM contatos ";
+$sql_read = "SELECT *FROM contatos";
 
 
 $dados = $PDO->query($sql_read);
@@ -17,5 +17,5 @@ while ($contato = $dados->fetch(PDO::FETCH_OBJ)) {
         "email" => $contato->email
     );
 }
-
+var_dump($resultado);
 echo json_encode($resultado);
